@@ -1,0 +1,55 @@
+@use 'colors' as *;
+
+@mixin btn {
+	width: 300px;
+	height: 60px;
+	border: none;
+	font-size: 2rem;
+	text-transform: uppercase;
+	background-color: $navy;
+	color: $white;
+	box-shadow: 8px 8px 41px -14px rgba(9, 5, 128, 0.4);
+	cursor: pointer;
+}
+
+// Effect by: https://www.sliderrevolution.com/resources/css-button-hover-effects/
+
+@mixin btnEffect {
+	border: 2px solid currentColor;
+
+	overflow: hidden;
+	padding: 1rem 2rem;
+	position: relative;
+	text-decoration: none;
+	transition: 0.2s transform ease-in-out;
+	will-change: transform;
+	z-index: 0;
+
+	&::after {
+		background-color: $yellow;
+
+		content: '';
+		display: block;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		transform: translate(-100%, 0) rotate(10deg);
+		transform-origin: top left;
+		transition: 0.2s transform ease-out;
+		will-change: transform;
+		z-index: -1;
+	}
+
+	&:hover::after {
+		transform: translate(0, 0);
+	}
+
+	&:hover {
+		border: 2px solid transparent;
+		color: $navy;
+		transform: scale(1.05);
+		will-change: transform;
+	}
+}

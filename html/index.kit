@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Converter</title>
+  <!-- @include 'styles.kit' -->
+</head>
+
+<body>
+
+
+  <div class="wrapper">
+    <div class="box box__left">
+      <div class="wrapper__buttons">
+        <button class="btn btn__length">Długość</button>
+        <button class="btn btn__weight">Waga</button>
+        <button class="btn btn__temperature">Temperatura</button>
+        <button class="btn btn__volume">Objętość</button>
+      </div>
+    </div>
+    <div class="box box__right">
+      <div class="wrapper__converter">
+        <div class="modal modal__lenght show-modal">
+          <div class="modal__title">
+            <p class="modal__title-item">from</p>
+            <p class="modal__title-item">to</p>
+            <p class="modal__title-item">calculation</p>
+          </div>
+          <div class="modal__from">
+            <input type="radio" name="from" class="input input__radio" id="meter"><label for="meter"
+              class="label label__radio">meter</label>
+            <input type="radio" name="from" class="input input__radio" id="inch"><label for="inch"
+              class="label label__radio">inch</label>
+            <input type="radio" name="from" class="input input__radio" id="foot"><label for="foot"
+              class="label label__radio">foot</label>
+            <input type="radio" name="from" class="input input__radio" id="yard"><label for="yard"
+              class="label label__radio">yard</label>
+            <input type="radio" name="from" class="input input__radio" id="land-mile"><label for="land-mile"
+              class="label label__radio">land
+              mile</label>
+          </div>
+          <div class="modal__to">
+            <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis minima perspiciatis cum
+              recusandae animi cumque, fuga iusto in! Fugiat culpa unde, natus a impedit repudiandae praesentium odit
+              rerum perspiciatis! Accusamus?</p>
+          </div>
+
+        </div>
+        <div class="modal modal__weight"></div>
+        <div class="modal modal__temperature"></div>
+        <div class="modal modal__volume"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>
